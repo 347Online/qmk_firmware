@@ -31,6 +31,7 @@ enum layer_names {
 
 #define XK_NUM MO(_NUM)
 #define XK_SYM MO(_SYM)
+#define XK_STG MO(_STG)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_split_3x6_3(
@@ -54,7 +55,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_HOME, KC_PGDN, KC_PGUP,  KC_END, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, _______,  KC_SPC,     KC_ENT,MO(_STG), _______
+                                          _______, _______,  KC_SPC,     KC_ENT,  XK_STG, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -66,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______,MO(_STG),  KC_SPC,     KC_ENT, _______, _______
+                                          _______,  XK_STG,  KC_SPC,     KC_ENT, _______, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
