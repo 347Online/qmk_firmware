@@ -94,3 +94,35 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   )
 };
+
+#ifdef OLED_ENABLE
+oled_rotation_t oled_init_user(oled_rotation_t rotation) {
+    return OLED_ROTATION_270;
+}
+
+bool oled_task_user(void) {
+    switch (get_highest_layer(layer_state)) {
+        case _BASE:
+            oled_write_ln_P(PSTR("BASE"), false);
+            break;
+            
+        case _NUM:
+            oled_write_ln_P(PSTR("NUM"), false);
+            break;
+            
+        case _SYM:
+            oled_write_ln_P(PSTR("SYM"), false);
+            break;
+            
+        case _STG:
+            oled_write_ln_P(PSTR("STG"), false);
+            break;
+
+        default:
+            oled_write_ln_P(PSTR("Undefined"), false);
+            break;
+    }
+
+    return false;
+}
+#endif
