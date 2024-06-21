@@ -37,7 +37,6 @@ enum layer_names {
 #define XK_OPT MO(_OPT)
 
 #define SP_ENT LT(_SPCL, KC_ENT)
-#define SP_SPC LT(_SPCL, KC_SPC)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_BASE] = LAYOUT_split_3x6_3(
@@ -48,7 +47,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LSFT,    KC_Z,    KC_X,    KC_C,    KC_D,    KC_V,                         KC_K,    KC_H, KC_COMM,  KC_DOT, KC_SLSH, KC_RSFT,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          KC_LGUI,  XK_NUM,  SP_ENT,     SP_SPC,  XK_SYM, KC_RALT
+                                          KC_LGUI,  XK_NUM,  SP_ENT,     KC_SPC,  XK_SYM, KC_RALT
                                       //`--------------------------'  `--------------------------'
   ),
 
