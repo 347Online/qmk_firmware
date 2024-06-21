@@ -27,14 +27,14 @@ enum layer_names {
     _NUM,
     _SYM,
     _SPCL,
-    _STG
+    _OPT
 };
 
 #define XK_TAB LCTL_T(KC_TAB)
 
 #define XK_NUM MO(_NUM)
 #define XK_SYM MO(_SYM)
-#define XK_STG MO(_STG)
+#define XK_OPT MO(_OPT)
 
 #define SP_ENT LT(_SPCL, KC_ENT)
 #define SP_SPC LT(_SPCL, KC_SPC)
@@ -60,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_HOME, KC_PGDN, KC_PGUP,  KC_END, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______, _______, _______,    _______,  XK_STG, _______
+                                          _______, _______, _______,    _______,  XK_OPT, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -72,7 +72,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       _______, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      KC_UNDS, KC_PLUS, KC_LCBR, KC_RCBR, KC_PIPE, KC_TILD,
   //|--------+--------+--------+--------+--------+--------+--------|  |--------+--------+--------+--------+--------+--------+--------|
-                                          _______,  XK_STG, _______,    _______, _______, _______
+                                          _______,  XK_OPT, _______,    _______, _______, _______
                                       //`--------------------------'  `--------------------------'
   ),
 
@@ -88,7 +88,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                                       //`--------------------------'  `--------------------------'
   ),
 
-    [_STG] = LAYOUT_split_3x6_3(
+    [_OPT] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
       QK_BOOT, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,                      XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
@@ -144,7 +144,7 @@ bool oled_task_user(void) {
             oled_write_ln_P(PSTR("@$&"), false);
             break;
             
-        case _STG:
+        case _OPT:
             oled_write_ln_P(PSTR("OPT"), false);
             break;
 
