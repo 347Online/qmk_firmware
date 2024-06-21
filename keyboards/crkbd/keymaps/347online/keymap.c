@@ -148,6 +148,10 @@ bool oled_task_user(void) {
             oled_write_ln_P(PSTR("OPT"), false);
             break;
 
+        case _SPCL:
+            oled_write_ln_P("MEDIA", false);
+            break;
+
         default:
             oled_write_ln_P(PSTR("Undef"), false);
             break;
