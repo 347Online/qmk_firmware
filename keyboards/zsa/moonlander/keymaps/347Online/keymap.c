@@ -23,7 +23,7 @@
 
 enum layers {
     BASE,  // default layer
-    DIR,   // numbers
+    DIR,   // directions
     SYMB,  // symbols
     MDIA,  // media keys
 };
